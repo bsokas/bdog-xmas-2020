@@ -3,14 +3,11 @@ import React from 'react'
 import {
     SafeAreaView,
     StyleSheet,
-    ScrollView,
     View,
     Text,
     StatusBar,
-    PlatformColor,
     Image
 } from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 import { AppButton } from './components/buttons/AppButton'
 
 const constants = {
@@ -73,5 +70,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         // lineHeight: 1.6
     },
-    buttonContainer: {}
+    buttonContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: 75,
+    }
 })
