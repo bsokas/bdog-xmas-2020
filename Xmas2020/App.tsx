@@ -1,109 +1,43 @@
-/*
- * @format
- */
-
-import React from 'react';
-import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react'
+import 'react-native-gesture-handler'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+    SafeAreaView,
+    StyleSheet,
+    View,
+    StatusBar,
+} from 'react-native'
 
-import { AppV2 } from './AppV2';
+import { Home, Start } from './components/screens'
+import { StackProps, NavigationMappings } from './components/constants/stackMappings'
 
-declare const global: {HermesInternal: null | {}};
+const Stack = createStackNavigator<StackProps>()
 
-const App = () => {
-  return (
-    <>
-      <AppV2/>
-      {/* <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+const App = () => (
+    <NavigationContainer>
+        <StatusBar barStyle="dark-content" backgroundColor="purple"/>
+        <SafeAreaView>
+            <View style={styles.appView}>
+                <Stack.Navigator initialRouteName="Home">
+                    {/* TODO figure out these mappings */}
+                    {/* {NavigationMappings.map(screenProps => 
+                        <Stack.Screen name={screenProps.name} component={Home} />)
+                    } */}
+                    <Stack.Screen name="Home" component={Home} key="home"/>
+                    <Stack.Screen name="Start" component={Start} key="start"/>
+                </Stack.Navigator>
             </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView> */}
-    </>
-  );
-};
+        </SafeAreaView>
+    </NavigationContainer>
+)
+
+export default App
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
-
-export default App;
+    appView: {
+        backgroundColor: 'aliceblue',
+        height: '100%',
+        width: '100%'
+    },
+})

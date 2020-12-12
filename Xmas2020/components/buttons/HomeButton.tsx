@@ -1,13 +1,15 @@
+import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
-import { Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, TouchableOpacity, GestureResponderEvent } from 'react-native'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 
-export const AppButton = () => {
+type Props = {
+    onPress: (event: GestureResponderEvent) => void
+}
 
-    const onPress = () => {}
-
+const HomeButton = (props: Props) => {
     return(
-        <TouchableOpacity onPress={onPress} style={styles.buttonStyles}>
+        <TouchableOpacity onPress={props.onPress} style={styles.buttonStyles}>
             <Text style={styles.textStyles}>Get Motivated</Text>
         </TouchableOpacity>
     )
@@ -27,3 +29,5 @@ const styles = StyleSheet.create({
         fontSize: 20,
     }
 })
+
+export default HomeButton
