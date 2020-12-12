@@ -24,8 +24,8 @@ const App = () => (
                     {/* {NavigationMappings.map(screenProps => 
                         <Stack.Screen name={screenProps.name} component={Home} />)
                     } */}
-                    <Stack.Screen name="Home" component={Home} key="home"/>
-                    <Stack.Screen name="Start" component={Start} key="start"/>
+                    <Stack.Screen name="Home" component={Home} key="home" />
+                    <Stack.Screen name="Start" component={Start} key="start" options={{ title: 'Get Motivated'}}/>
                 </Stack.Navigator>
             </View>
         </SafeAreaView>

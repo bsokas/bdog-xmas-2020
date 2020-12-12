@@ -7,7 +7,7 @@ export type StackProps = {
     Start: Object|undefined
 }
 
-type ScreenName = 'Home' | 'Start'
+export type ScreenName = 'Home' | 'Start' | 'MaxAndObi' | 'Quotes' | 'Tucson' | 'Philosophy' | 'DanceMusic'
 
 interface ScreenProps {
     name: ScreenName,

@@ -12,7 +12,7 @@ import { StackProps } from '../constants/stackMappings'
 
 const constants = {
     title: 'MCATivation',
-    subtitle: 'Worthless motivational quotes to keep you going during your exam studying'
+    subtitle: 'Motivational pick-me-ups to keep you going during your exam studying'
 }
 
 type Props = { navigation: StackNavigationProp<StackProps, 'Home'>}
