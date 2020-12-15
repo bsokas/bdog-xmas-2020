@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 
 import HomeButton from '../buttons/HomeButton'
+import PartyTime from '../buttons/PartyButton'
 import { StackProps } from '../constants/stackMappings'
 
 const constants = {
@@ -34,6 +35,9 @@ const Home = ({ navigation }: Props) => {
             </View>
             <View style={styles.buttonContainer}>
                 <HomeButton onPress={onButtonPress}/>
+            </View>
+            <View style={styles.buttonContainer}>
+                <PartyTime />
             </View>
         </View>  
     )
@@ -67,7 +71,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: 75,
+        paddingTop: 25,
     }
 })
 

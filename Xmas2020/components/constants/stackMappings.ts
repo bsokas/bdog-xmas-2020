@@ -5,9 +5,10 @@ import { Home, Start } from "../screens";
 export type StackProps = {
     Home: undefined,
     Start: Object|undefined
+    PartyTime: Object|undefined
 }
 
-export type ScreenName = 'Home' | 'Start' | 'MaxAndObi' | 'Quotes' | 'Tucson' | 'Philosophy' | 'DanceMusic'
+export type ScreenName = 'Home' | 'Start' | 'MaxAndObi' | 'Quotes' | 'Tucson' | 'Philosophy' | 'DanceMusic' | 'PartyTime'
 
 interface ScreenProps {
     name: ScreenName,
