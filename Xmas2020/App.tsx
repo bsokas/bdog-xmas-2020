@@ -9,7 +9,7 @@ import {
     StatusBar,
 } from 'react-native'
 
-import { Home, Start, PartyTime } from './components/screens'
+import { Home, Start, PartyTime, PictureList } from './components/screens'
 import { StackProps, NavigationMappings } from './components/constants/stackMappings'
 
 const Stack = createStackNavigator<StackProps>()
@@ -26,6 +26,24 @@ const App = () => (
                     } */}
                     <Stack.Screen name="Home" component={Home} key="home" />
                     <Stack.Screen name="Start" component={Start} key="start" options={{ title: 'Get Motivated'}}/>
+                    <Stack.Screen name="MaxAndObi" key="maxandobi">
+                        {props => 
+                            <PictureList 
+                                {...props} 
+                                screenName="MaxAndObi" 
+                                title="Max and Obi"
+                                subtitle="Because they are the greatest"
+                            />}
+                    </Stack.Screen>
+                    <Stack.Screen name="Tucson" key="tucson">
+                        {props => 
+                            <PictureList 
+                                {...props} 
+                                screenName="Tucson" 
+                                title="Tucson"
+                                subtitle="Future B-Dog stomping grounds"
+                        />}
+                    </Stack.Screen>
                     <Stack.Screen name="PartyTime" component={PartyTime} key="partytime"/>
                 </Stack.Navigator>
             </View>

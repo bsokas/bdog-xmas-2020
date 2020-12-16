@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View, ScrollView, StyleSheet } from 'react-native'
-import { ChoiceList } from '../misc'
+import { ChoiceList } from '../subcomponents'
 
 const content = {
     instruction: 'Choose an option to un-fry that brain or make that frown turn upside down!'

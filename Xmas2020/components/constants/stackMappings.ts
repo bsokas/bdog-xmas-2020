@@ -1,10 +1,12 @@
-import { Home, Start } from "../screens";
+import { Home, PictureListProps, Start } from "../screens";
 
 // StackProps contains a param for each of the app screens  
 // Undefine signifies the route doesn't take params, Type|undefined means they're optional
 export type StackProps = {
     Home: undefined,
-    Start: Object|undefined
+    Start: Object|undefined,
+    MaxAndObi: PictureListProps,
+    Tucson: Object,
     PartyTime: Object|undefined
 }
 
