@@ -5,7 +5,7 @@ import { ScreenName } from '../constants/stackMappings'
 
 // PictureList is a reusable screen component
 // It will take a list of image locations and load the images in a scrollable view
-interface Props {
+export interface Props {
     screenName: ScreenName,
     title: string,
     subtitle: string
