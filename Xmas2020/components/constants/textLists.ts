@@ -9,6 +9,7 @@ export const quoteList: Quote[] = [
         text: 'If you like it, then you should have put a ring on it',
         author: 'Beyonce'
     },
+    // This appears to be too long --> TODO figure out how to decrease font-size
     {
         text: 'At every party there are two kinds of people – those who want to go home and those who don’t. The trouble is, they are usually married to each other.',
         author: 'Ann Landers'
@@ -19,7 +20,7 @@ export const quoteList: Quote[] = [
     },
     {
         text: 'Bitches ain\'t shit but hoes and tricks',
-        author: 'Dr. Dre, not Ben Fowlds'
+        author: 'Dr. Dre, not Ben Folds'
     },
     {
         text: 'I’m too drunk to taste this chicken.',
@@ -66,3 +67,14 @@ export const quoteList: Quote[] = [
         author: 'Paul'
     }
 ]
+
+interface Question {
+    text: string
+}
+
+export const questionList: Question[] = [
+    {
+        text: 'If you\'re being a butt, do you KNOW you\'re being a butt?'
+    }
+]
+

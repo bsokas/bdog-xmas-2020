@@ -9,7 +9,8 @@ export type StackProps = {
     Tucson: Object,
     PartyTime: Object|undefined,
     Quotes: undefined,
-    Philosophy: undefined
+    Philosophy: undefined,
+    DanceMusic: undefined
 }
 
 export type ScreenName = 'Home' | 'Start' | 'MaxAndObi' | 'Quotes' | 'Tucson' | 'Philosophy' | 'DanceMusic' | 'PartyTime'
