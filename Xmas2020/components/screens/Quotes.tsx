@@ -39,7 +39,9 @@ const Quotes = () => {
     return(
         <View style={styles.quoteView}>
             <View style={styles.quoteContainer}>
-                <Text style={styles.quoteText}>{`"${quoteProfile.text}"`}</Text>
+                <Text style={{...styles.quoteText, fontSize: quoteProfile.text.length > 66 ? 48 : 64}}>
+                    {`"${quoteProfile.text}"`}
+                </Text>
                 <Text style={styles.quoteAuthor}>{quoteProfile.author}</Text>
             </View>
             <View style={styles.buttonContainer}>

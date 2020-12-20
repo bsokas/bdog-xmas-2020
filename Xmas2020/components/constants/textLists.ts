@@ -9,7 +9,6 @@ export const quoteList: Quote[] = [
         text: 'If you like it, then you should have put a ring on it',
         author: 'Beyonce'
     },
-    // This appears to be too long --> TODO figure out how to decrease font-size
     {
         text: 'At every party there are two kinds of people – those who want to go home and those who don’t. The trouble is, they are usually married to each other.',
         author: 'Ann Landers'
@@ -73,8 +72,16 @@ interface Question {
 }
 
 export const questionList: Question[] = [
-    {
-        text: 'If you\'re being a butt, do you KNOW you\'re being a butt?'
-    }
+    { text: 'If you\'re being a butt, do you KNOW you\'re being a butt?'},
+    { text: 'Can vegetables feel pain?'},
+    { text: 'Are clowns scary, funny, or misunderstood?'},
+    { text: 'Who closes the bus door when the driver gets off?'},
+    { text: 'What color are mirrors?'},
+    { text: 'If Cinderella\'s shoe fit perfectly, why did it fall off?' },
+    { text: 'Would Transformers buy life insurance, or car insurance?' },
+    { text: 'If a King farts, is it a noble gas?' },
+    { text: 'If a vampire bites a zombie, will the zombie become a vampire? Or the vampire become a zombie?'},
+    { text: 'If Fedex and UPS merged, would it be called FedUP?'},
+    { text: 'Do Lipton employees take coffee breaks?'}
 ]
 

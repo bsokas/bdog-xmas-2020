@@ -9,7 +9,7 @@ import {
     StatusBar,
 } from 'react-native'
 
-import { Home, Start, PartyTime, PictureList, Quotes, DanceMusic } from './components/screens'
+import { Home, Start, PartyTime, PictureList, Quotes, DanceMusic, Questions } from './components/screens'
 import { StackProps, NavigationMappings } from './components/constants/stackMappings'
 
 const Stack = createStackNavigator<StackProps>()
@@ -26,7 +26,7 @@ const App = () => (
                     } */}
                     <Stack.Screen name="Home" component={Home} key="home" />
                     <Stack.Screen name="Start" component={Start} key="start" options={{ title: 'Get Motivated'}}/>
-                    <Stack.Screen name="MaxAndObi" key="maxandobi">
+                    <Stack.Screen name="MaxAndObi" key="maxandobi" options={{ title: 'Max and Obi'}}>
                         {props => 
                             <PictureList 
                                 {...props} 
@@ -44,9 +44,10 @@ const App = () => (
                                 subtitle="Future B-Dog stomping grounds"
                         />}
                     </Stack.Screen>
-                    <Stack.Screen name="Quotes" component={Quotes}/>
-                    <Stack.Screen name="DanceMusic" component={DanceMusic} />
-                    <Stack.Screen name="PartyTime" component={PartyTime} key="partytime"/>
+                    <Stack.Screen name="Quotes" component={Quotes} options={{ title: "Inspirational Quotes" }}/>
+                    <Stack.Screen name="Questions" component={Questions} options={{ title: 'Philosophical Questions'}} />
+                    <Stack.Screen name="DanceMusic" component={DanceMusic} options={{ title: "Dance Party" }}/>
+                    <Stack.Screen name="PartyTime" component={PartyTime} key="partytime" options={{ title: "PARTY TIME!" }}/>
                 </Stack.Navigator>
             </View>
         </SafeAreaView>

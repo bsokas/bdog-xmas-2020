@@ -9,11 +9,11 @@ export type StackProps = {
     Tucson: Object,
     PartyTime: Object|undefined,
     Quotes: undefined,
-    Philosophy: undefined,
-    DanceMusic: undefined
+    Questions: undefined,
+    DanceMusic: undefined,
 }
 
-export type ScreenName = 'Home' | 'Start' | 'MaxAndObi' | 'Quotes' | 'Tucson' | 'Philosophy' | 'DanceMusic' | 'PartyTime'
+export type ScreenName = 'Home' | 'Start' | 'MaxAndObi' | 'Quotes' | 'Tucson' | 'Questions' | 'DanceMusic' | 'PartyTime'
 
 interface ScreenProps {
     name: ScreenName,

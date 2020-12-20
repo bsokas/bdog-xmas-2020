@@ -24,7 +24,7 @@ const choices: Choices[] = [
     },
     {
         buttonText: 'Philosophical Questions',
-        goToOnPress: 'Philosophy'
+        goToOnPress: 'Questions'
     },
     {
         buttonText: 'Dance Music',
