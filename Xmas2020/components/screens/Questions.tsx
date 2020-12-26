@@ -11,10 +11,8 @@ const Questions = () => {
         // larger --> smaller means go right
         if (pressOutLocX != pressInLocX) {
             if (pressOutLocX > pressInLocX && questionIndex > 0) {
-                console.log('swipe to right')
                 setQuestionIndex(questionIndex - 1)
             } else if (pressOutLocX < pressInLocX && questionIndex < questionList.length - 1) {
-                console.log('swipe to left')
                 setQuestionIndex(questionIndex + 1)
             }
         }
