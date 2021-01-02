@@ -64,6 +64,14 @@ export const quoteList: Quote[] = [
     {
         text: 'This one time I biked across the country...',
         author: 'Paul'
+    },
+    {
+        text: 'If you\'re gonna be a butt, you have to do non-butty things',
+        author: 'B-Dog'
+    },
+    {
+        text: 'Golf golf golf golf Evee golf golf golf golf fantasy football',
+        author: 'Gare-bear'
     }
 ]
 
